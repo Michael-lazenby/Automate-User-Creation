@@ -34,9 +34,27 @@ Azure Logic apps are a low-code or no-code solution, and they are helpful when t
 
 <h2>Step 3: Logic App workflow</h2>
 <p>Click on “Create a workflow in Designer,” and it will prompt us to create a new workflow, as seen below.</p>
-<img src="https://i.imgur.com/IIVcCyf.png" height="80%" width="80%" alt="neworkflow"/>
+<img src="https://i.imgur.com/RBIS7Vn.png" height="80%" width="80%" alt="neworkflow"/>
 <p>Name the workflow; once again, it is essential to name it something recognizable. We also have the option to choose a state type, and we will select “Stateful.” We choose stateful in this scenario because our app will deal with inputs and outputs that change the state. After we fill out that information, we will press “Create,” once the app has rendered, click on the app’s name, and it will redirect us to our logic apps workflow page.</p>
-<img src="https://i.imgur.com/IIVcCyf.png" height="80%" width="80%" alt="neworkflow"/>
+<img src="https://i.imgur.com/tqQOjuH.png" height="80%" width="80%" alt="neworkflow"/>
+<p>Click on “Edit in Designer” and select “Get started”. You will be taken to the logic app designer page.</p>
+<img src="https://i.imgur.com/AYzolyH.png" height="80%" width="80%" alt="neworkflow"/>
+<p>Once you’re inside the designer page, click “Add a trigger,” this is how we will start designing our application. A trigger is an input and output event. Click on the trigger and search for HTTP. We are going to select “When an HTTP request is received.” You will also need to fill out the JSON schema, which you can do with a JSON convertor. If you have never used a JSON converter, click here for a simple convertor.</p>
+<img src="https://i.imgur.com/EHar0p4.png" height="80%" width="80%" alt="neworkflow"/>
+<img src="https://i.imgur.com/aSsZzkR.png" height="80%" width="80%" alt="neworkflow"/>
+<p>We will then click on the “+” and add another action. The action we will be adding is to “create a user.” We will fill out the basic information for the user provided to us via the HTTP request: the user’s first and last name, phone number, display name, Mail Nickname, Password, and the user principal name(UPN). You will fill out the fields by clicking on them and selecting “Dynamic content” or “Expression.” The Dynamic content is the information from the HTTP request, and the expressions are essential functions Microsoft provides.</p>
+<img src="https://i.imgur.com/0sONn5t.png" height="80%" width="80%" alt="neworkflow"/>
+<p>You can create the display name however you would like, but most organizations combine the employee’s first and last name. You will also need to create a password that can be a statically typed or a dynamic password. The User Principle name must be another combination of the first and last name or another unique identifier your organization uses for their employees.</p>
+<p>Click on “+” again to add another step, and we will search for “Add user to group,” as shown below.</p>
+<img src="https://i.imgur.com/OkLG0Wa.png" height="80%" width="80%" alt="neworkflow"/>
+<p>Once we click the “Add user to group” action, fill out the required information, as shown below.</p>
+<img src="https://i.imgur.com/AH6LsoB.png" height="80%" width="80%" alt="neworkflow"/>
+<p>Add the Group ID. The group ID information is in the Groups section in the Azure portal, and you will copy and paste the group ID. We created the user ID in the previous step. You must click inside the “User ID” box, and another box will appear with dynamic content options. You will choose “ID”, as shown below.</p>
+<img src="https://i.imgur.com/DdlLoKU.png" height="80%" width="80%" alt="neworkflow"/>
+<p>After filling out the information to add a user to the group, we have one more step to add to our logic app: to send an email notifying you that a new user has been created. Click on the “+” to add another step, and this time we will search for “Send an email.” You can choose from various email providers, but using your Outlook email will be more straightforward for this project. You will be prompted to fill out the information for your email, as seen below.</p>
+<img src="https://i.imgur.com/TN2VGQ2.png" height="80%" width="80%" alt="neworkflow"/>
+<p>You can put any information you want to include in the body and the subject line. You must also choose who you want to send the confirmation email to. You have completed your logic app, and now it is time to test it to see if it is working correctly.</p>
+<img src="https://i.imgur.com/QTDn0n2.png" height="80%" width="80%" alt="neworkflow"/>
 <h2>Blocking inbound ports with port security rules</h2>
 <p>
 The next step of my project was to stop the continuous ping requests from my Windows VM. I did this by adjusting the inbound port rules for my Ubuntu VM via the Network Security Group settings, and I denied traffic from the ICMP port. This allowed me to observe the ping requests timing out, and I didn't receive a response from the VM. </p>
