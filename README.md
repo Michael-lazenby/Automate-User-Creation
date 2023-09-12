@@ -21,12 +21,16 @@ Azure Logic apps are a low-code or no-code solution, and they are helpful when t
 <h2>Step 1: Creating a new Azure AD tenant</h2>
 
 <p>When creating a new Azure AD tenant, navigate to Azure Active Directory, click on Manage tenants, and click Create. We must fill out the basic information like our organization’s name and domain. After we click on Review + Create, it will take a few minutes to populate.</p>
-<img src="https://i.imgur.com/r5R5wN1.png" height="80%" width="80%" alt="AD tennant"/>
+<img src="" height="80%" width="80%" alt="AD tennant"/>
+
 <h2>Step 2: Creating an Azure Logic App</h2>
+
 <p>Head to the Logic App section via the Azure portal and click “Add.” We must place the logic app inside a subscription and a resource group. We will also need to name our logic app, and you should name it something easily identifiable.
 </p>
-<img src="https://i.imgur.com/IIVcCyf.png" height="80%" width="80%" alt="designer"/>
-
+<img src="https://i.imgur.com/kiaFAGZ.png" height="80%" width="80%" alt="logicappcreation"/>
+<p>Then, we will click “Review + Create.” We will be redirected back to the Logic App directory, and then we will navigate to our newly created app. Once inside, click the “Logic app designer,” where we will start designing our workflow.</p>
+<img src="https://i.imgur.com/IIVcCyf.png" height="80%" width="80%" alt="logichome"/>
+<p></p>
 
 <h2>Creating virtual machines</h2>
 
