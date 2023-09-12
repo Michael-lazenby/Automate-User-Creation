@@ -55,29 +55,19 @@ Azure Logic apps are a low-code or no-code solution, and they are helpful when t
 <img src="https://i.imgur.com/TN2VGQ2.png" height="80%" width="80%" alt="neworkflow"/>
 <p>You can put any information you want to include in the body and the subject line. You must also choose who you want to send the confirmation email to. You have completed your logic app, and now it is time to test it to see if it is working correctly.</p>
 <img src="https://i.imgur.com/QTDn0n2.png" height="80%" width="80%" alt="neworkflow"/>
-<h2>Blocking inbound ports with port security rules</h2>
-<p>
-The next step of my project was to stop the continuous ping requests from my Windows VM. I did this by adjusting the inbound port rules for my Ubuntu VM via the Network Security Group settings, and I denied traffic from the ICMP port. This allowed me to observe the ping requests timing out, and I didn't receive a response from the VM. </p>
-<img src="https://i.imgur.com/vbtVvOi.png" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<h2>Other port practice</h2>
-<h3>Connecting with SSH</h3>
-<p>
-I connected to the Ubuntu VM using SSH. While connected to the Ubuntu VM I created a new directory using the mkdir command and added a file to the directory using the touch command. 
-<img src="https://i.imgur.com/4RHnH8G.png" width="80%" alt="Disk Sanitization Steps"/>
-<h3>DNS traffic monitoring</h3>
-<p>
-I used nslookup to send a DNS request to Google. Google's DNS server responded with IPv6 and IPv4 addresses .</p>
-<img src="https://i.imgur.com/UB7QZNv.png" width="80%" alt="dns"/>
+<h2>Step 4: Testing the Logic app</h2>
+<p>In the Logic app designer page, navigate to the top and click “Run Trigger,” A drop-down menu will appear, and click “Run with payload.” You will prompted to fill out the JSON to create your user.</p>
+<p>Note — You can use a different method to test the HTTP request if you would like, but I choose to use the testing method within Azure just because it’s more convenient. You can use services like Postman if you prefer a different service than Azure.</p>
+<img src="https://i.imgur.com/gj7V2Yf.png" height="80%" width="80%" alt="neworkflow"/>
+<p>Once you click “Run,” it will trigger your application, and you can see if the event was successful in the overview section of our Logic app.</p>
+<img src="https://i.imgur.com/2PNnTh0.png" height="80%" width="80%" alt="neworkflow"/>
+<p>If it states that your trigger was successful in the overview page, you can navigate to the users and groups section to verify the user was made correctly and added to the right group.</p>
+<img src="https://i.imgur.com/QS0D3oY.png" height="80%" width="80%" alt="neworkflow"/>
+<img src="https://i.imgur.com/TRVcd7f.png" height="80%" width="80%" alt="neworkflow"/>
+<p>The last step is verifying that you received an email with a user’s creation notification. Head over to your email and ensure you received it; if you did, it indicates that your Logic app is working correctly.</p>
+<img src="https://i.imgur.com/CekRpIK.png" height="80%" width="80%" alt="neworkflow"/>
 
-<br />
-<h2>Alternative method to filter ports via Wireshark</h2>
-<p>
-I also learned a different method to filter ports in Wireshark. The other way to filter ports is by typing the network protocol and the port you are trying to filter. I have listed examples below:</p>
+<h2>Congratulations!</h2>
+<p> You have successfully created your first Azure Logic App. You have learned the basic process of creating an Azure Logic App, and you can do many more amazing things with it. I would recommend continuing to practice and creating other Logic apps for other processes that can be automated.
 
-- tcp.port == 22
-- udp.port == 53
-
-<br />
-<h2>Conclusion</h2>
-<p> Overall this lab was insightful because it allowed me to visualize network traffic through different protocols. It allowed me to tinker with different settings and gain hands-on experience. It is important to read how network protocols work, but the hands-on experience reinforces the concepts I have been learning about. </p>
+</p>
