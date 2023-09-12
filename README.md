@@ -1,7 +1,7 @@
 
 
 <p align="center">
-<img src="https://i.imgur.com/hvR1GC5.png" alt="Azure Logic App"/>
+<img src="https://i.imgur.com/AmXPf38.png" alt="Azure Logic App"/>
 </p>
 
 <h1>Azure Logic Apps: Automating the onboarding process</h1>
@@ -21,7 +21,7 @@ Azure Logic apps are a low-code or no-code solution, and they are helpful when t
 <h2>Step 1: Creating a new Azure AD tenant</h2>
 
 <p>When creating a new Azure AD tenant, navigate to Azure Active Directory, click on Manage tenants, and click Create. We must fill out the basic information like our organization’s name and domain. After we click on Review + Create, it will take a few minutes to populate.</p>
-<img src="" height="80%" width="80%" alt="AD tennant"/>
+<img src="https://i.imgur.com/kDyC0Vr.png" height="80%" width="80%" alt="AD tennant"/>
 
 <h2>Step 2: Creating an Azure Logic App</h2>
 
