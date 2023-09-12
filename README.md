@@ -30,23 +30,13 @@ Azure Logic apps are a low-code or no-code solution, and they are helpful when t
 <img src="https://i.imgur.com/kiaFAGZ.png" height="80%" width="80%" alt="logicappcreation"/>
 <p>Then, we will click “Review + Create.” We will be redirected back to the Logic App directory, and then we will navigate to our newly created app. Once inside, click the “Logic app designer,” where we will start designing our workflow.</p>
 <img src="https://i.imgur.com/IIVcCyf.png" height="80%" width="80%" alt="logichome"/>
-<p></p>
-
-<h2>Creating virtual machines</h2>
 
 
-<br />
-
-<h2>Wireshark installation and observation</h2>
-<p>
-Before I started the lab I installed Wireshark. I observed network traffic with Wireshark, and I was also able to filter ports by using the filter bar. For example, I filtered ICMP(Internet Control Message Protocol) and viewed traffic between my virtual machines when I sent ping requests to the Ubuntu VM. After sending one ping request I sent a continuous ping request to the Ubuntu VM.
-</p>
-<br />
-
-<p>
-<img src="https://i.imgur.com/SDL7FsW.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-</p>
-<br />
+<h2>Step 3: Logic App workflow</h2>
+<p>Click on “Create a workflow in Designer,” and it will prompt us to create a new workflow, as seen below.</p>
+<img src="https://i.imgur.com/IIVcCyf.png" height="80%" width="80%" alt="neworkflow"/>
+<p>Name the workflow; once again, it is essential to name it something recognizable. We also have the option to choose a state type, and we will select “Stateful.” We choose stateful in this scenario because our app will deal with inputs and outputs that change the state. After we fill out that information, we will press “Create,” once the app has rendered, click on the app’s name, and it will redirect us to our logic apps workflow page.</p>
+<img src="https://i.imgur.com/IIVcCyf.png" height="80%" width="80%" alt="neworkflow"/>
 <h2>Blocking inbound ports with port security rules</h2>
 <p>
 The next step of my project was to stop the continuous ping requests from my Windows VM. I did this by adjusting the inbound port rules for my Ubuntu VM via the Network Security Group settings, and I denied traffic from the ICMP port. This allowed me to observe the ping requests timing out, and I didn't receive a response from the VM. </p>
